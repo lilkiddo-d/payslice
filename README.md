@@ -15,6 +15,27 @@ employer ──deposit──▶ Payroll (clone) ──per-second accrual──�
                                                               worker.claim() pro-rata stock tokens
 ```
 
+## Mainnet deployment (Robinhood Chain, 4663)
+
+Deployed 2026-10-09 (L2 blocks 84142240–84144133). Full list: [`contracts/deployments/4663.json`](contracts/deployments/4663.json).
+
+| Contract | Address |
+|---|---|
+| Timelock (48h) | [`0xB88f0fB2A37F9013D923ea258276591f7c404C1b`](https://robinhoodchain.blockscout.com/address/0xB88f0fB2A37F9013D923ea258276591f7c404C1b) |
+| PayrollFactory | [`0xc134C3B61B04Bfe3b947e26bc75021b64c8a61a7`](https://robinhoodchain.blockscout.com/address/0xc134C3B61B04Bfe3b947e26bc75021b64c8a61a7) |
+| Payroll (implementation) | [`0xFfe0fCA0e56EEc034C6acdc518029Edea53C778f`](https://robinhoodchain.blockscout.com/address/0xFfe0fCA0e56EEc034C6acdc518029Edea53C778f) |
+| SliceRouter | [`0x31e5d1B35775EE0A0B0B5212B0e7555eccc4495C`](https://robinhoodchain.blockscout.com/address/0x31e5d1B35775EE0A0B0B5212B0e7555eccc4495C) |
+| BatchConverter | [`0x76c866E959c148be51C952eF5254bB234fe7bcB1`](https://robinhoodchain.blockscout.com/address/0x76c866E959c148be51C952eF5254bB234fe7bcB1) |
+| DexAdapter | [`0x759edf26C4C2C1539FFb8BD5f8ccEf10aB5Dfac7`](https://robinhoodchain.blockscout.com/address/0x759edf26C4C2C1539FFb8BD5f8ccEf10aB5Dfac7) |
+| BonusVesting | [`0xd3132Ccc98Bb300994C10AeB3E9CF3a13910E2C0`](https://robinhoodchain.blockscout.com/address/0xd3132Ccc98Bb300994C10AeB3E9CF3a13910E2C0) |
+| MarketClock | [`0xa2440666ee5A8101D72ea0F82C3e42810a763ACD`](https://robinhoodchain.blockscout.com/address/0xa2440666ee5A8101D72ea0F82C3e42810a763ACD) |
+| OracleAdapter | [`0x58c1E97C04792Eef174D253B357EaFd04BBc693d`](https://robinhoodchain.blockscout.com/address/0x58c1E97C04792Eef174D253B357EaFd04BBc693d) |
+| FeeCollector | [`0x4C7C70Ed458F582fd048ac8a8d57715dCA22Dff3`](https://robinhoodchain.blockscout.com/address/0x4C7C70Ed458F582fd048ac8a8d57715dCA22Dff3) |
+| ProjectTokenHooks | [`0x271EAD75208413D95d24a832d61d5Aef9Ab14f38`](https://robinhoodchain.blockscout.com/address/0x271EAD75208413D95d24a832d61d5Aef9Ab14f38) |
+| ComplianceRegistry | [`0x39eeC9F7470699767720D217eB0F89406A749e58`](https://robinhoodchain.blockscout.com/address/0x39eeC9F7470699767720D217eB0F89406A749e58) |
+
+Source verification files for Blockscout's web form: [`contracts/verification/`](contracts/verification/README.md).
+
 ## Monorepo
 
 | Path | What |

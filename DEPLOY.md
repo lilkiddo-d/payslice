@@ -62,6 +62,11 @@ The script:
 5. Writes `contracts/deployments/4663.json` and `app/src/config/generated/4663.json`.
 6. Verifies every contract on Blockscout.
 
+> **Note (2026-10-09):** Blockscout's API sits behind a Cloudflare bot challenge that rejected every CLI
+> verification request (`forge --verify` and `forge verify-contract`). Verify through the website instead:
+> the standard-JSON inputs and exact constructor arguments for the live deployment are in
+> [`contracts/verification/`](contracts/verification/README.md).
+
 If verification gets rate-limited, re-run only the verification step:
 
 ```bash

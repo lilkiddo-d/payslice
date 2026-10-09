@@ -27,6 +27,11 @@ interface IUniV3Pool {
     function liquidity() external view returns (uint128);
 }
 
+/// @dev Arbitrum precompile: `block.number` returns the L1 block on Arbitrum chains; this returns the L2 block.
+interface IArbSys {
+    function arbBlockNumber() external view returns (uint256);
+}
+
 /// @title Deploy
 /// @notice Deploys and wires the whole Payslice protocol, then hands every admin role to the 48h Timelock.
 ///
@@ -97,7 +102,12 @@ contract Deploy is Script {
         r.keeper = vm.envOr("PAYSLICE_KEEPER", msg.sender);
         r.complianceOperator = vm.envOr("PAYSLICE_COMPLIANCE", r.admin);
         r.delay = vm.envOr("TIMELOCK_DELAY", uint256(48 hours));
+        // Robinhood Chain is Arbitrum Orbit: block.number is the L1 block, so read the L2 block from ArbSys.
+        // (anvil forks don't implement the precompile, so fall back to block.number there)
         startBlock = block.number;
+        try IArbSys(address(0x64)).arbBlockNumber() returns (uint256 l2Block) {
+            startBlock = l2Block;
+        } catch {}
 
         console2.log("Deployer :", r.deployer);
         console2.log("Admin    :", r.admin);

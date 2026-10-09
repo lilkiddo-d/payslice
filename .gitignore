@@ -20,3 +20,5 @@ contracts/lcov.info
 # never commit keys
 *.key
 keystore/
+
+*.recovery.lock
