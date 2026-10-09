@@ -1,0 +1,22 @@
+node_modules/
+.next/
+out/
+*.log
+.env
+.env.local
+.env.*.local
+.vercel
+
+# foundry
+contracts/out/
+contracts/cache/
+contracts/broadcast/*/31337/
+contracts/broadcast/*/*/dry-run/
+*.tsbuildinfo
+next-env.d.ts
+contracts/deployments/dryrun-*.json
+contracts/lcov.info
+
+# never commit keys
+*.key
+keystore/

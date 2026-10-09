@@ -1,0 +1,11 @@
+{
+  "name": "@payslice/config",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./chains.ts",
+  "types": "./chains.ts",
+  "exports": {
+    ".": "./chains.ts"
+  }
+}

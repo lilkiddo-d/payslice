@@ -1,0 +1,17 @@
+{
+  "name": "payslice",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Per-second stablecoin payroll with automatic tokenized-stock slices on Robinhood Chain",
+  "packageManager": "pnpm@10.18.0",
+  "scripts": {
+    "build": "pnpm -r build",
+    "contracts:build": "cd contracts && forge build",
+    "contracts:test": "cd contracts && forge test",
+    "contracts:coverage": "cd contracts && forge coverage --report summary --no-match-coverage \"(test|script)\"",
+    "contracts:slither": "cd contracts && slither . --exclude-informational --exclude-low",
+    "app:dev": "pnpm --filter @payslice/app dev",
+    "app:build": "pnpm --filter @payslice/app build",
+    "keeper": "pnpm --filter @payslice/keeper start"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "@payslice/keeper",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "tsx keeper.ts",
+    "dry": "tsx keeper.ts --dry-run",
+    "loop": "tsx keeper.ts --loop",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@payslice/config": "workspace:*",
+    "viem": "^2.57.4"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.0"
+  }
+}
